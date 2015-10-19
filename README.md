@@ -7,7 +7,7 @@ A heroku buildpack for setting the ssh private key as part of the application bu
 Upload the private key to heroku.
 
 ```
-heroku config:set SSH_KEY=$(cat ~/.ssh/id_rsa | base64)
+heroku config:set SSH_KEY=$(cat ~/.ssh/id_rsa)
 ```
 
 Add a `.buildpacks` file (used by `heroku-buildpack-multi`) which contains this and the default node.js buildpack.
