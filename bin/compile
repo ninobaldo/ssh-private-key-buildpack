@@ -17,6 +17,7 @@ if [ "$ssh_key" != "" ]; then
 	mkdir "$HOME/.ssh"
 	echo "$ssh_key" | base64 --decode > "$HOME/.ssh/id_rsa"
 	ssh -oStrictHostKeyChecking=no -T git@bitbucket.org uptime
+	ssh -oStrictHostKeyChecking=no -T git@gitlab.com uptime
 	exit 0
 else
 	echo "-----> No SSH private key"
